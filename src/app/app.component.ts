@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'java-banter';
+
+  data = [
+    {
+      title : 'Shanti'
+    },
+    {
+      title : 'Anant'
+    }
+  ]
+
+
+
+  onClick() {
+    alert("Hello I was clicked")
+    console.log("Hello !!!!!!")
+  }
+
+  onInput(value:string){
+    this.data[1].title = value;
+  }
+
 }
