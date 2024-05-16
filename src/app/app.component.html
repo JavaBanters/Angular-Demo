@@ -1,9 +1,14 @@
 <div class="top-menu">
-  <img class="logo" src="https://angular.io/assets/images/logos/angular/angular.svg">
+  <img class="logo"  src="https://angular.io/assets/images/logos/angular/angular.svg">
 </div>
 
-<h1 class="title">Welcome to {{data[1].title}}</h1>
+<div class="courses">
+<course-card (courseClicked)="onAppClicked($event)" [course]="course1" ></course-card>
+<course-card [course]="course2" ></course-card>
+<course-card [course]="course3" ></course-card>
+</div>
 
-<input class="demo" [value]="data[1].title" (keyup)="onInput(userInput.value)" #userInput>
 
-<!--<button (click)="onClick()">Submit</button>-->
+
+<!-- {{data[1].title}}
+<input class="demo" [value]="data[0].title" (keyup)="onInput(userInput.value)" #userInput/> -->

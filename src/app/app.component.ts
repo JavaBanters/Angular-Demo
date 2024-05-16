@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { COURSES } from '../db-data';
+import { Course } from './model/course';
 
 @Component({
   selector: 'app-root',
@@ -7,24 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  data = [
-    {
-      title : 'Shanti'
-    },
-    {
-      title : 'Anant'
-    }
-  ]
+  course = COURSES[0];
 
+  course1 = COURSES[0]; 
+  course2 = COURSES[1];
+  course3 = COURSES[2];
 
-
-  onClick() {
-    alert("Hello I was clicked")
-    console.log("Hello !!!!!!")
-  }
-
-  onInput(value:string){
-    this.data[1].title = value;
+  onAppClicked(course:Course){
+    console.log(course);
   }
 
 }
