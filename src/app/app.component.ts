@@ -9,14 +9,24 @@ import { Course } from './model/course';
 })
 export class AppComponent {
 
-  course = COURSES[0];
 
-  course1 = COURSES[0]; 
-  course2 = COURSES[1];
-  course3 = COURSES[2];
+
+  course1:Course = COURSES[9]; 
 
   onAppClicked(course:Course){
     console.log(course);
   }
+
+  onClicked(event){
+    alert('I was clicked')
+    console.log("system out println");
+    console.log(event.value)
+  }
+
+  onInput(event) {
+    this.title = event;
+  }
+
+  title:string = 'Java';
 
 }

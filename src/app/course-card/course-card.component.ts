@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Course } from '../model/course';
+import { COURSES } from '../../db-data';
 
 @Component({
   selector: 'course-card',
@@ -8,7 +9,6 @@ import { Course } from '../model/course';
 })
 export class CourseCardComponent implements OnInit{
 
-
   @Input()
   course:Course;
 
@@ -16,10 +16,10 @@ export class CourseCardComponent implements OnInit{
   title:string;
 
   @Input()
-  source:string;
+  icon:string;
 
   @Input()
-  course_description:string;
+  description:string;
 
   @Output()
   courseClicked = new EventEmitter<Course>();
@@ -29,7 +29,7 @@ export class CourseCardComponent implements OnInit{
   }
 
   onButtonClicked(){
-    this.courseClicked.emit(this.course)
+    
   }
 
 }
